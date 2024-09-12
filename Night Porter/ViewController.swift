@@ -16,6 +16,17 @@ class ViewController: UIViewController {
 
     @IBAction func changeBackground(_ sender: Any) {
         view.backgroundColor = UIColor.darkGray
+        
+        //get everything contained on the top level view
+        
+        let everything = view.subviews
+        for eachView in everything {
+//            eachView.backgroundColor = UIColor.green
+            if eachView is UILabel {
+                let currentLabel = eachView as! UILabel
+                currentLabel.textColor = UIColor.lightGray
+            }
+        }
     }
     
 }
